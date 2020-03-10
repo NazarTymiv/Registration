@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bg"></div>
+			<div class="center-bock">
+				<div class="title-block">
+					<h1 class="title">РЕЄСТРАЦІЯ</h1>
+				</div>
+				<form class="main-form">
+					<div class="inputBox">
+						<label class="label-text">Ваше ім'я:</label>
+						<input type="text" class="userInput">
+					</div>
+					<div class="inputBox">
+						<label class="label-text">Ваше прізвище:</label>
+						<input type="text" class="userInput">
+					</div>
+					<div class="inputBox">
+						<label class="label-text">E-mail:</label>
+						<input type="email" class="userInput">
+					</div>
+					<div class="inputBox">
+						<label class="label-text">Пароль:</label>
+						<input type="password" class="userInput">
+					</div>
+					<div class="inputBox">
+						<label class="label-text">Повторіть пароль:</label>
+						<input type="password" class="userInput">
+					</div>
+					<div class="buttonBox">
+						<div class="button">
+							ЗАРЕЄСТРУВАТИСЬ
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script>
+			$(".userInput").focus(function (){
+				$(this).parent().addClass("focus");
+			}).blur(function (){
+				if($(this).val()==''){
+					$(this).parent().removeClass("focus");
+				}
+			})
+		</script>
+	</body>
+</html>
